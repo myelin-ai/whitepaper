@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{subfiles}
+\usepackage{cite}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=2cm]{geometry}
+
+\setlength{\parindent}{0pt}
+
+\renewcommand\refname{Bibliography}
+
+
+\title{Scientific paper}
+\author{Jeremy Stucki}
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\newpage
+
+\begin{abstract}
+	\subfile{abstract}
+\end{abstract}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{First section}
+	\subfile{sections/first-section}
+
+\newpage
+
+\nocite{*}
+\bibliography{resources/bibliography}
+\bibliographystyle{plain}
+
+\end{document}
