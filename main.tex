@@ -3,7 +3,7 @@
 \usepackage{subfiles}
 \usepackage{cite}
 \usepackage[hidelinks]{hyperref}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1cm]{geometry}
 
 \setlength{\parindent}{0pt}
 
@@ -18,22 +18,26 @@
 \maketitle
 \thispagestyle{empty}
 
-\newpage
+\clearpage
+
+\twocolumn
 
 \begin{abstract}
 	\subfile{abstract}
 \end{abstract}
 
-\newpage
+\clearpage
 
+\onecolumn
 \tableofcontents
+\twocolumn
 
-\newpage
+\clearpage
 
 \section{First section}
 	\subfile{sections/first-section}
 
-\newpage
+\clearpage
 
 \nocite{*}
 \bibliography{resources/bibliography}
