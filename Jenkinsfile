@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'pdflatex main.tex'
-        sh './tools/bibulous.py main.aux'
+        sh 'bibtex main.aux'
         sh 'pdflatex main.tex'
         sh 'pdflatex main.tex'
       }
