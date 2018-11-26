@@ -38,4 +38,12 @@ The concept of water is simplified for our purposes as a static, lake-like body 
 This ressource is generated sparsely at central positions and will not be removed uppon consumption.
 Organisms are forced to interact with each other by the collectiv need to gather water at the same locations.
 
-Plants are used to naturally controll populations
+Plants are used to naturally controll populations. We define them as a ressource that is randomly generated
+many times when the simulation is instantiated. These ressources are removed uppon consumption. When left 
+alive for a certain amount of time, the plant will \emph{spread} by spawning a clone of itself at a nearby position.
+Following these rules, a plant in an unpopulated part of the simulation will eventually spread into a forest.
+This opens a ressource-rich habitat in which organisms can thrive. Organisms can be expected to 
+reproduce until the available plants start dwindle. At this point, the organisms will starve until either 
+the forrest has spread again or all the ressources in the area have been consumed, resulting in either
+migration or extinction. In any case, the number of organisms in the simulation will be bound by the amount of 
+plants that can be consumed.
