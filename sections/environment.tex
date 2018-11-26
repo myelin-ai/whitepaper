@@ -31,8 +31,8 @@ Both of these concepts can be described in nature as a concequence of the need f
 used in building survival machines, in Dawkin's words. 
 By introducing the idea of depleting ressources in organisms that are necessary for survival, 
 i.e. \emph{energy}, we can guide their behaviour by placing objects inside the world which organisms can consume
-in order to regain energy. The initial energy sources conceived by us are \emph{plants} and \emph{water}.
-
+in order to regain energy. The basic energy sources conceived by us are \emph{plants} and \emph{water}, which will
+both be necessary for the survival of the organism.
 
 The concept of water is simplified for our purposes as a static, lake-like body of water.
 This ressource is generated sparsely at central positions and will not be removed uppon consumption.
@@ -50,3 +50,8 @@ migration or extinction. In any case, the number of organisms in the simulation 
 plants that can be consumed. 
 \(\psi \) can be tuned according to the hardware limitations faced when running the simulation, as a higher value
 will result in a lower upper bound on the number of organisms existing at the same time in the world.
+
+The last kind of ressource available to an organism is, as an alternative to plants, the consumption of 
+other organisms. This allows for the formation of predator-prey dynamics which, 
+because of the life / dinner principle~\cite{Dawkins1982}, put selective pressure on the prey to adapt to its 
+environment.
