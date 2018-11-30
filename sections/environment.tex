@@ -1,0 +1,62 @@
+\section{Environment}
+
+\subsection{Separation of Mind and Body}
+In our only role model for General Intelligence, the human brain, a separation of the mind and
+the body it is residing in is unfeasible~\cite{Dudai2014}. Because we assume that nature is an 
+indicator for the necessary attributes of General Intelligence, the consequent thing to do is not 
+abstract away the bodily environment and its steering needs that gave rise to the mind in the first place~\cite{Jekely2010}. 
+A simulation capable of producing AGI must therefore in our opinion contain not only ``brains in jars'', but 
+also provide a body with which a simulated organism can interact with other organisms in a social manner and a 
+sandbox-like environment that is susceptible to change.
+But how far should such a simulation go? Which attributes of the real world are worth simulating in a way 
+that contributes to the emergence of AGI\@?
+
+\subsection{Social Interaction}
+The human brain does not only thrive on sensory input, it
+\emph{demands} interaction. Deprived of these stimulations,
+the brain suffers damage and enforces sensory feedback by employing
+hallucinations~\cite{Grassian2006}. From this, we can infer that
+our simulation must provide organisms with information about their surroundings.
+This includes the ability to communicate with other organisms over some
+kind of arbitrary protocol. By emitting own messages over the protocol and
+rewarding organisms that adhere to instructions broadcasted in this manner,
+we can steer how the organisms interpret and shape this common ``language''.
+
+\subsection{Life-Sustaining resources}
+In order to encourage neuroplasticity and adaptivity, the organisms should be 
+forced out of their comfort zone, as they could stagnate otherwise.
+To achieve this, the environment continuously alters itself to shift its resources.
+Another great booster of evolution is competition in a predator-prey environment~\cite{Dawkins1982}.
+Both of these concepts can be described in nature as a consequence of the need for resources 
+used in building survival machines, in Dawkin's words. 
+By introducing the idea of depleting resources in organisms that are necessary for survival, 
+i.e. \emph{energy}, we can guide their behaviour by placing objects inside the world which organisms can consume
+in order to regain energy. The basic energy sources conceived by us are \emph{plants} and \emph{water}, which will
+both be necessary for the survival of the organism.
+
+The concept of water is simplified for our purposes as a static, lake-like body of water.
+This resource is generated sparsely at central positions and will not be removed upon consumption.
+Organisms are forced to interact with each other by the collective need to gather water at the same locations.
+
+Plants are used to naturally control populations. We define them as a resource that is randomly generated
+many times when the simulation is instantiated. These resources are removed upon consumption. In every tick, 
+the plant has a chance determined by the plant spreading factor \(\psi \) to \emph{spread} by spawning a clone of itself
+at a nearby position. Following these rules, a plant in an unpopulated part of the simulation will eventually spread 
+into a forest.
+This opens a resource-rich habitat in which organisms can thrive. Organisms can be expected to 
+reproduce until the available plants start to dwindle. At this point, the organisms will starve until either 
+the forest has spread again or all the resources in the area have been consumed, resulting in either
+migration or extinction. In any case, the number of organisms in the simulation will be bound by the amount of 
+plants that can be consumed. 
+\(\psi \) can be tuned according to the hardware limitations faced when running the simulation, as a higher value
+will result in a lower upper bound on the number of organisms existing at the same time in the world.
+
+The last kind of resource available to an organism is, as an alternative to plants, the consumption of 
+other organisms. This allows for the formation of predator-prey dynamics which, 
+because of the life/dinner principle~\cite{Dawkins1982}, put selective pressure on the prey to adapt to its 
+environment.
+
+\subsection{Dimensionality}
+Because 3D simulations are much more expensive in terms of complexity and required computational power and
+none of the characteristics of GI in nature we identified requires a dimension of depth, we choose
+to run our simulation in a 2D, top-down environment.

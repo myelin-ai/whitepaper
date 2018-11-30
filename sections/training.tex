@@ -1,0 +1,21 @@
+\section{Training}
+The driving force behind evolution is the gene seeking immortality~\cite{Dawkins1976}.
+As conventional training with backpropagation proves to be impractical when used with
+spiking neural networks~\cite{Paugam-Moisy2012}, genetic algorithms seem like a natural training choice
+when going for a nature-inspired simulation. Additionally, it is our belief that the clear error
+coefficient used in backpropagation is an unrealistic ideal and, by virtue of being calculated for
+a specific task, contributes to the aforementioned lack of plasticity in second-generation neural networks.
+
+As we want to train our AI to aquire general skills, the function governing the reproductive success of
+the organisms for the genetic algorithm has to be general as well. The most general reward system
+is one that does not reward anything specific at all. The organism that spreads its 
+genes is not determined by a hard-coded reward system, but by the organism's ability to reproduce, 
+just like in real life. This way, we shift the burden of defining what is considered ``good fitness''
+away from a pre-defined algorithm into the fabric of the simulation itself.
+For this, we propose giving the organisms the ability to consent to sexual reproduction.
+This way, the organisms are put under selective pressure by their potential mates 
+by way of sexual selection.~\cite{Dawkins1982}
+
+This way of training intentionally does not teach the organisms how to handle specific data.
+Evolution does not teach you e.g. how to speak English either. It only provides you with the mental
+capacity to do so.

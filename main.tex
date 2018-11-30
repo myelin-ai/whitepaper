@@ -5,13 +5,16 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[left=1cm, right=1cm, top=1cm, bottom=2cm]{geometry}
 
-\setlength{\parindent}{0pt}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+
+\setlength{\parskip}{2pt}
 
 \renewcommand\refname{Bibliography}
 
 
-\title{Scientific paper}
-\author{Jeremy Stucki}
+\title{Neurological Concept (Working title)}
+\author{Jan Nils Ferner, Jeremy Stucki}
 
 
 \begin{document}
@@ -34,8 +37,17 @@
 
 \clearpage
 
-\section{First section}
-	\subfile{sections/first-section}
+To do:
+\begin{enumerate}
+	\item Topology: Evo Devo
+	\item Efficiency: Time encoding
+	\item Combination of evolutionary and lifetime spanning modification
+\end{enumerate}
+
+\subfile{sections/introduction}
+\subfile{sections/environment}
+\subfile{sections/training}
+\subfile{sections/genetics}
 
 \clearpage
 
