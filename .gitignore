@@ -224,3 +224,6 @@ TSWLatexianTemp*
 # standalone packages
 *.sta
 *.pdf
+
+# temporary tex files
+*temp.tex
