@@ -26,7 +26,7 @@ pipeline {
     }
   }
   post {
-    success {
+    always {
       archiveArtifacts artifacts: 'main.pdf'
     }
   }
