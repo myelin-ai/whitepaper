@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Spellcheck') {
           steps {
-            sh "find . -type f -name '*.tex' | xargs ./scripts/spellcheck.sh"
+            sh './scripts/spellcheck.sh'
           }
         }
       }
