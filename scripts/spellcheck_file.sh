@@ -1,4 +1,4 @@
-SPELLING_MISTAKES="$(cat "$1" | aspell list -t -d en_US)";
+SPELLING_MISTAKES="$(cat "$1" | aspell list -t -d en_US | grep -i -v -f dictionary.txt)";
 
 if [[ "${SPELLING_MISTAKES}" != "" ]]
 then
