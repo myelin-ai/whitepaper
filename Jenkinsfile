@@ -24,6 +24,15 @@ pipeline {
         }
       }
     }
+    stage('Deploy') {
+      // when {
+      //   branch 'master'
+      // }
+      steps {
+        sh './scripts/generate-metadata.py'
+        sh './scripts/upload-whitepaper.sh'
+      }
+    }
   }
   post {
     always {
