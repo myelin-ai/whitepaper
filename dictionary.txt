@@ -22,3 +22,5 @@ neuroplasticity
 adaptivity
 Dawkins
 dimensionality
+myelin
+Whitepaper
