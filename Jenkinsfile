@@ -24,6 +24,14 @@ pipeline {
         }
       }
     }
+    stage('Deploy') {
+      when {
+        branch 'master'
+      }
+      steps {
+        sh './scripts/upload-whitepaper.sh'
+      }
+    }
   }
   post {
     always {
