@@ -5,3 +5,21 @@ with genetic algorithms can easily push the computational cost of advancement
 beyond any reasonable limit~\cite{Ferner2017}.
 To avoid this pitfall we can use the extra encoding potential provided by 
 the addition of time as an input of our neural network's state~\cite{Paugam-Moisy2012}.
+
+\subsection{What to encode?}
+
+The most obvious, but also one of, if not the most, crucial questions of genetic encoding is \emph{"What (and how) to encode?"}, meaning:
+
+\begin{itemize}
+	\item What data do we need to represent in our genes?
+	\item How can we most efficiently encode it?
+	\item How can we allow mutations?
+	\item How do we allow our genes to encode more information, when mutations occur, while still maintaining our ability to reinterprete its data in a way that makes sense?
+\end{itemize}
+
+The importance of the last question is not to be overseen. Allowing genes to "grow" over generations means that our simulation can improve without developer interference. Having fixed size genes would imply that the maximum complexity represented by an organism is defined by us, including the definition of which genes map to which parts and purposes in an organism.
+
+NEAT, an algorithm that develops neural network structures on it's own through stochastic methods (TODO: Reference to NEAT from Stanley and Miikkulainen) tackles this problem by having genes encode their "purpose" (source and destination neurons, when adding a new neuron), and by assigning unique numbers to each new gene (that was created through a mutation), to make sure that when networks are mixed (a mechanism that can be understood as something similar to reproduction), these genes are not picked twice if they exist in both networks. This also allows you to observe the journey of single genes when observing NEAT, which is a neat (pun not intended) feature.
+
+
+\subsection{On Evo Devo}
