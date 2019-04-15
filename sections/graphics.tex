@@ -1,0 +1,16 @@
+\section{Graphics}
+
+\subsection{Cluster}
+\begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
+
+	\draw[rounded corners] (0, 0) rectangle (4, 4);
+
+	\node[neuron] (top) at (2, 3) {1};
+ 	\node[neuron] (bottom-left) at (1, 1) {0};
+ 	\node[neuron] (bottom-right) at (3, 1) {2};
+ 	
+ 	\draw[->] (bottom-left) edge [bend left] (top);
+ 	\draw[->] (top) edge [bend left] (bottom-left);
+ 	\draw[->] (top) -- (bottom-right);
+ 	\draw[->] (bottom-left) -- (bottom-right);
+\end{tikzpicture}
