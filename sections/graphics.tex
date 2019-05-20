@@ -3,137 +3,137 @@
 
 \subsection{First cluster}
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
-	\draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
+    \draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
 
-	\node[neuron] (top) at (2, 3) {$i_1$};
- 	\node[neuron] (bottom-left) at (1, 1) {$i_0$};
- 	\node[neuron] (bottom-right) at (3, 1) {$i_2$};
- 	
- 	\draw[->] (bottom-left) edge [bend left] (top);
- 	\draw[->] (top) edge [bend left] (bottom-left);
- 	\draw[->] (top) -- (bottom-right);
- 	\draw[->] (bottom-left) -- (bottom-right);
+    \node[neuron] (top) at (2, 3) {$i_1$};
+     \node[neuron] (bottom-left) at (1, 1) {$i_0$};
+     \node[neuron] (bottom-right) at (3, 1) {$i_2$};
+     
+     \draw[->] (bottom-left) edge [bend left] (top);
+     \draw[->] (top) edge [bend left] (bottom-left);
+     \draw[->] (top) -- (bottom-right);
+     \draw[->] (bottom-left) -- (bottom-right);
 \end{tikzpicture}
 
 \subsection{Second cluster}
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
-	\draw[rounded corners, red, dashed] (0, 0) rectangle (4, 2);
-	
-	\node[neuron] (i-0) at (1, 1) {$i_0$};
-	\node[neuron] (i-1) at (3, 1) {$i_1$};
-	
-	\draw[->] (i-0) edge [bend left] (i-1);
-	\draw[->] (i-1) edge [bend left] (i-0);
+    \draw[rounded corners, red, dashed] (0, 0) rectangle (4, 2);
+    
+    \node[neuron] (i-0) at (1, 1) {$i_0$};
+    \node[neuron] (i-1) at (3, 1) {$i_1$};
+    
+    \draw[->] (i-0) edge [bend left] (i-1);
+    \draw[->] (i-1) edge [bend left] (i-0);
 \end{tikzpicture}
 
 \subsection{Second cluster placed on first cluster}
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
-	\draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
-	
-	\node[neuron] (top) at (2, 3) {$h_1$};
-	\node[neuron] (middle-left) at (1, 1) {$h_0$};
-	\node[neuron] (middle-right) at (3, 1) {$h_2$};
-	
-	\draw[->] (middle-left) edge [bend left] (top);
-	\draw[->] (top) edge [bend left] (middle-left);
-	\draw[->] (top) -- (middle-right);
-	\draw[->] (middle-left) -- (middle-right);
+    \draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
+    
+    \node[neuron] (top) at (2, 3) {$h_1$};
+    \node[neuron] (middle-left) at (1, 1) {$h_0$};
+    \node[neuron] (middle-right) at (3, 1) {$h_2$};
+    
+    \draw[->] (middle-left) edge [bend left] (top);
+    \draw[->] (top) edge [bend left] (middle-left);
+    \draw[->] (top) -- (middle-right);
+    \draw[->] (middle-left) -- (middle-right);
 
-	\draw[rounded corners, red, dashed] (2, 0) rectangle (6, 2);
+    \draw[rounded corners, red, dashed] (2, 0) rectangle (6, 2);
 
-	\node[neuron] (h-3) at (5, 1) {$h_3$};
-	
-	\draw[->] (middle-right) edge [bend left] (h-3);
-	\draw[->] (h-3) edge [bend left] (middle-right);
+    \node[neuron] (h-3) at (5, 1) {$h_3$};
+    
+    \draw[->] (middle-right) edge [bend left] (h-3);
+    \draw[->] (h-3) edge [bend left] (middle-right);
 \end{tikzpicture}
 
 \subsection{Second cluster placed on second cluster}
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
-	\draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
-	
-	\node[neuron] (h-1) at (2, 3) {$h_1$};
-	\node[neuron] (h-0) at (1, 1) {$h_0$};
-	\node[neuron] (h-2) at (3, 1) {$h_2$};
-	
-	\draw[->] (h-0) edge [bend left] (h-1);
-	\draw[->] (h-1) edge [bend left] (h-0);
-	\draw[->] (h-1) -- (h-2);
-	\draw[->] (h-0) -- (h-2);
-	
-	\draw[rounded corners, red, dashed] (2, 0) rectangle (6, 2);
-	
-	\node[neuron] (h-3) at (5, 1) {$h_3$};
-	
-	\draw[->] (h-2) edge [bend left] (h-3);
-	\draw[->] (h-3) edge [bend left] (h-2);
+    \draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
+    
+    \node[neuron] (h-1) at (2, 3) {$h_1$};
+    \node[neuron] (h-0) at (1, 1) {$h_0$};
+    \node[neuron] (h-2) at (3, 1) {$h_2$};
+    
+    \draw[->] (h-0) edge [bend left] (h-1);
+    \draw[->] (h-1) edge [bend left] (h-0);
+    \draw[->] (h-1) -- (h-2);
+    \draw[->] (h-0) -- (h-2);
+    
+    \draw[rounded corners, red, dashed] (2, 0) rectangle (6, 2);
+    
+    \node[neuron] (h-3) at (5, 1) {$h_3$};
+    
+    \draw[->] (h-2) edge [bend left] (h-3);
+    \draw[->] (h-3) edge [bend left] (h-2);
 
-	\draw[rounded corners, red] (4, 0) rectangle (8, 2);
+    \draw[rounded corners, red] (4, 0) rectangle (8, 2);
 
-	\node[neuron] (h-4) at (7, 1) {$h_4$};
-	
-	\draw[->] (h-3) edge [bend left] (h-4);
-	\draw[->] (h-4) edge [bend left] (h-3);
+    \node[neuron] (h-4) at (7, 1) {$h_4$};
+    
+    \draw[->] (h-3) edge [bend left] (h-4);
+    \draw[->] (h-4) edge [bend left] (h-3);
 \end{tikzpicture}
  
 \subsection{Third cluster}
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
-	\draw[rounded corners, violet, dashed] (0, 0) rectangle (6, 2);
-	
-	\node[neuron] (i-0) at (1, 1) {$i_0$};
-	\node[neuron] (i-1) at (3, 1) {$i_1$};
-	\node[neuron] (i-2) at (5, 1) {$i_2$};
-	
-	\draw[->] (i-0) -- (i-1);
-	\draw[->] (i-1) -- (i-2);
-	\draw[->] (i-2) edge [bend left] (i-0);
+    \draw[rounded corners, violet, dashed] (0, 0) rectangle (6, 2);
+    
+    \node[neuron] (i-0) at (1, 1) {$i_0$};
+    \node[neuron] (i-1) at (3, 1) {$i_1$};
+    \node[neuron] (i-2) at (5, 1) {$i_2$};
+    
+    \draw[->] (i-0) -- (i-1);
+    \draw[->] (i-1) -- (i-2);
+    \draw[->] (i-2) edge [bend left] (i-0);
 \end{tikzpicture}
 
 \subsection{Third cluster placed on second cluster}
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
-	\draw[rounded corners, blue, dashed] (0, 0) rectangle (3.9, 4);
-	
-	\node[neuron] (h-1) at (2, 3) {$h_1$};
-	\node[neuron] (h-0) at (1, 1) {$h_0$};
-	\node[neuron] (h-2) at (3, 1) {$h_2$};
-	
-	\draw[->] (h-0) edge [bend left] (h-1);
-	\draw[->] (h-1) edge [bend left] (h-0);
-	\draw[->] (h-1) -- (h-2);
-	\draw[->] (h-0) -- (h-2);
-	
+    \draw[rounded corners, blue, dashed] (0, 0) rectangle (3.9, 4);
+    
+    \node[neuron] (h-1) at (2, 3) {$h_1$};
+    \node[neuron] (h-0) at (1, 1) {$h_0$};
+    \node[neuron] (h-2) at (3, 1) {$h_2$};
+    
+    \draw[->] (h-0) edge [bend left] (h-1);
+    \draw[->] (h-1) edge [bend left] (h-0);
+    \draw[->] (h-1) -- (h-2);
+    \draw[->] (h-0) -- (h-2);
+    
 
-	\draw[rounded corners, red, dashed] (2.3, 0.2) rectangle (5.7, 1.8);
-	
-	\node[neuron] (h-3) at (5, 1) {$h_3$};
-	
-	\draw[->] (h-2) edge [bend left] (h-3);
-	\draw[->] (h-3) edge [bend left] (h-2);
-	
+    \draw[rounded corners, red, dashed] (2.3, 0.2) rectangle (5.7, 1.8);
+    
+    \node[neuron] (h-3) at (5, 1) {$h_3$};
+    
+    \draw[->] (h-2) edge [bend left] (h-3);
+    \draw[->] (h-3) edge [bend left] (h-2);
+    
 
-	\draw[rounded corners, red, dashed] (4.3, 0.3) rectangle (7.7, 1.9);
-	
-	\node[neuron] (h-4) at (7, 1) {$h_4$};
-	
-	\draw[->] (h-3) edge [bend left] (h-4);
-	\draw[->] (h-4) edge [bend left] (h-3);
-	
+    \draw[rounded corners, red, dashed] (4.3, 0.3) rectangle (7.7, 1.9);
+    
+    \node[neuron] (h-4) at (7, 1) {$h_4$};
+    
+    \draw[->] (h-3) edge [bend left] (h-4);
+    \draw[->] (h-4) edge [bend left] (h-3);
+    
 
-	\draw[rounded corners, violet, dashed] (4.1, 0) rectangle (5.9, 6);
+    \draw[rounded corners, violet, dashed] (4.1, 0) rectangle (5.9, 6);
 
-	\node[neuron] (h-5) at (5, 3) {$h_5$};
-	\node[neuron] (h-6) at (5, 5) {$h_6$};
+    \node[neuron] (h-5) at (5, 3) {$h_5$};
+    \node[neuron] (h-6) at (5, 5) {$h_6$};
 
-	\draw[->] (h-3) -- (h-5);
-	\draw[->] (h-5) -- (h-6);
-	\draw[->] (h-6) edge [bend left] (h-3);
+    \draw[->] (h-3) -- (h-5);
+    \draw[->] (h-5) -- (h-6);
+    \draw[->] (h-6) edge [bend left] (h-3);
 
 
-	\draw[rounded corners, violet, dashed] (6.1, 0) rectangle (7.9, 6);
+    \draw[rounded corners, violet, dashed] (6.1, 0) rectangle (7.9, 6);
 
-	\node[neuron] (h-7) at (7, 3) {$h_7$};
-	\node[neuron] (h-8) at (7, 5) {$h_8$};
-	
-	\draw[->] (h-4) -- (h-7);
-	\draw[->] (h-7) -- (h-8);
-	\draw[->] (h-8) edge [bend left] (h-4);
+    \node[neuron] (h-7) at (7, 3) {$h_7$};
+    \node[neuron] (h-8) at (7, 5) {$h_8$};
+    
+    \draw[->] (h-4) -- (h-7);
+    \draw[->] (h-7) -- (h-8);
+    \draw[->] (h-8) edge [bend left] (h-4);
 \end{tikzpicture}
