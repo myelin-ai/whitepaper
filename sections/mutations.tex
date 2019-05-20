@@ -3,35 +3,54 @@
 
 \subsection{Mutations Overview}
 
-\subsubsection{Cluster-Mutations}
 \begin{enumerate}\itemsep0pt
-	\item New Neuron
-	\item New Connection
-	\item Disable Connection
-	\item Weight Changes
-	\item Remove Neuron
-	\item Placement Neuron change
+	\item \textbf{Add Neuron}
+	
+	Add a neuron to an existing cluster. The neuron will be placed on an existing connection.  
+	A $\rightarrow$ B becomes A $\rightarrow$ C $\rightarrow$ B, where A and B are existing neurons and C is the newly placed neuron.
+	
+	\item \textbf{Add Connection}
+	
+	Add a new connection between a pair of neurons on an existing cluster.
+	
+	\item \textbf{Disable Connection}
+	
+	Mark an existing connection as disabled.
+	
+	\item \textbf{Nudge Weight}
+	
+	Nudge the weight of an existing connection by a small delta value.
+	
+	\item \textbf{Change Placement Neuron}
+	
+	Change the neuron that is marked as the placement neuron on a cluster.
+	
+	\item \textbf{Add New Cluster}
+	
+	Add a new cluster and place it through a new hox gene.
+	
+	\item \textbf{Copy Cluster}
+	
+	Create a copy of an existing cluster and place it through a new hox gene.
+	
+	\item \textbf{Desync Cluster}
+	
+	Allow a cluster to mutate independently by turning it into a new cluster.
+	
+	\item \textbf{Bridge}
+	
+	Add a new cluster in between two clusters that share a neuron.
+	
+	\item \textbf{Add Hox With Existing Cluster}
+	
+	Add a new hox gene that places an existing cluster.
+	
+	\item \textbf{Change Target Neuron}
+	
+	Change the target neuron of a hox gene.
+	
+	\item \textbf{Duplicate Hox}
+	
+	Add a new hox gene to the end of the genome with the same configuration as an already existing one.
+	
 \end{enumerate}
-
-\subsubsection{Genome-Mutations Concerning Clusters}
-\begin{enumerate}\itemsep0pt
-	\item New Cluster
-	\item Copy of Cluster
-	\item Bridge-Mutation
-\end{enumerate}
-
-\subsubsection{Genome-Mutations Concerning Hox Genes}
-\begin{enumerate}\itemsep0pt
-	\item Placed Cluster by Hox changes
-	\item New Hox placing an existing Cluster
-	\item New Hox placing a new Cluster
-	\item Copy of existing Hox
-	\item Target Neuron change
-\end{enumerate}
-
-\subsection{Details}
-
-\subsubsection{Cluster-Mutations}
-
-These mutations are happening to a cluster - they merely change the structure of what is placed, not how it's placed.
-
