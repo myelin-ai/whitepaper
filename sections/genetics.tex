@@ -5,3 +5,71 @@ with genetic algorithms can easily push the computational cost of advancement
 beyond any reasonable limit~\cite{Ferner2017}.
 To avoid this pitfall we can use the extra encoding potential provided by 
 the addition of time as an input of our neural network's state~\cite{Paugam-Moisy2012}.
+
+\subsection{Genome}
+Our genome consists of Cluster \& Hox Genes.
+These represent the information which is required to build the neural network.
+
+\subsubsection{Cluster Genes}
+Cluster Genes act as a blueprint for a set of neurons and their connections, which we call a cluster.
+
+\subsubsection{Hox Genes}
+Hox Genes make up the building plan for the neural network,
+specifying how clusters should be placed and connected.
+
+\newpage
+
+\label{Example of a genome}
+\subsubsection{Example of a genome}
+We define three cluster genes and four hox genes.
+
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/first_cluster}
+    \caption{First cluster - The placement neuron is $i_0$}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/second_cluster}
+    \caption{Second cluster - The placement neuron is $i_0$}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/third_cluster}
+    \caption{Third cluster - The placement neuron is $i_0$}
+\end{figure}
+
+\paragraph{The first hox gene} places a cluster based on the first cluster gene.
+\FloatBarrier
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/first_cluster}
+    \caption{Cluster placed by the first hox gene}
+\end{figure}
+\FloatBarrier
+
+\newpage
+
+\paragraph{The second hox gene} places clusters based on the second cluster gene on the clusters placed by the first hox gene.
+The target neuron is $i_2$.
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/second_cluster_placed_on_first_hox}
+    \caption{Cluster placed by the second hox gene}
+\end{figure}
+
+\paragraph{The third hox gene} places clusters based on the second cluster gene on the clusters placed by the second hox gene.
+The target neuron is $i_1$.
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/second_cluster_placed_on_second_cluster}
+    \caption{Cluster placed by the third hox gene}
+\end{figure}
+
+\paragraph{The fourth hox gene} clusters based on the third cluster gene on all clusters based on the second cluster gene.
+The target neuron is $i_1$.
+\begin{figure}[H]
+    \centering
+    \subfile{graphics/third_cluster_placed_on_second_hox}
+    \caption{Clusters placed by the fourth hox gene}
+\end{figure}
