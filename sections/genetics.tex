@@ -13,9 +13,15 @@ These represent the information which is required to build the neural network.
 \subsubsection{Cluster Genes}
 Cluster Genes act as a blueprint for a set of neurons and their connections, which we call a cluster.
 
+\paragraph{Explaining Important Terms}
+Placement Neuron: The neuron of the cluster that will be shared with the cluster that it is attached to. Instead of placing a new neuron, a neuron of an already placed cluster is taken, and connected with the rest of the cluster. See the \emph{Target Neuron} of the Hox Gene for more information.
+
 \subsubsection{Hox Genes}
 Hox Genes make up the building plan for the neural network,
 specifying how clusters should be placed and connected.
+
+\paragraph{Explaining Important Terms}
+Target Neuron: Refers to a neuron on a cluster that has already been placed.
 
 \newpage
 
