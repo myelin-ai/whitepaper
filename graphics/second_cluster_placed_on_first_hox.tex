@@ -1,9 +1,9 @@
 \begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
     \draw[rounded corners, blue, dashed] (0, 0) rectangle (4, 4);
     
-    \node[neuron] (top) at (2, 3) {$h_1$};
-    \node[neuron] (middle-left) at (1, 1) {$h_0$};
-    \node[neuron] (middle-right) at (3, 1) {$h_2$};
+    \node[neuron] (top) at (2, 3) {$n_1$};
+    \node[neuron] (middle-left) at (1, 1) {$n_0$};
+    \node[neuron] (middle-right) at (3, 1) {$n_2$};
     
     \draw[->] (middle-left) edge [bend left] (top);
     \draw[->] (top) edge [bend left] (middle-left);
@@ -12,7 +12,7 @@
 
     \draw[rounded corners, red, dashed] (2, 0) rectangle (6, 2);
 
-    \node[neuron] (h-3) at (5, 1) {$h_3$};
+    \node[neuron] (h-3) at (5, 1) {$n_3$};
     
     \draw[->] (middle-right) edge [bend left] (h-3);
     \draw[->] (h-3) edge [bend left] (middle-right);
