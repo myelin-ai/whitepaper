@@ -29,6 +29,10 @@ Target Neuron: Refers to a neuron on a cluster that has already been placed.
 \subsection{Example of a genome}
 We define three cluster genes and four hox genes.
 
+\paragraph{Naming of Neurons}
+Naming neurons uniquely without creating confusion is hard. We decided to use the $i$ prefix for cluster definitions (read $i_0$ as \emph{neuron with the index 0 on the cluster}).
+Once a cluster is placed, we name the neurons in the order they have been placed in the network. As a prefix, we decided to use $h$. You can read $h_0$ as \emph{neuron with the handle 0}.
+
 \begin{figure}[H]
     \centering
     \subfile{graphics/first_cluster}
