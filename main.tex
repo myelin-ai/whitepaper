@@ -5,8 +5,14 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[left=1cm, right=1cm, top=1cm, bottom=2cm]{geometry}
 
+\usepackage{hyperref}
+\usepackage[section]{placeins}
+\usepackage{tabularx}
+\usepackage{float}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tikz}
+\usetikzlibrary{shapes.misc}
 
 \setlength{\parskip}{2pt}
 
@@ -14,7 +20,7 @@
 
 
 \title{Myelin Whitepaper}
-\author{Jan Nils Ferner, Jeremy Stucki}
+\author{Jan Nils Ferner, Mathias Fischler, Jeremy Stucki}
 
 
 \begin{document}
@@ -42,6 +48,10 @@
 \subfile{sections/training}
 \subfile{sections/genetics}
 \subfile{sections/mutations}
+
+\clearpage
+
+\listoffigures
 
 \clearpage
 
