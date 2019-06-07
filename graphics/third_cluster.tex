@@ -1,0 +1,11 @@
+\begin{tikzpicture}[neuron/.style={circle, minimum size=1cm, draw=black!100}]
+    \draw[rounded corners, violet, dashed] (0, 0) rectangle (6, 2);
+    
+    \node[neuron] (i-0) at (1, 1) {$i_0$};
+    \node[neuron] (i-1) at (3, 1) {$i_1$};
+    \node[neuron] (i-2) at (5, 1) {$i_2$};
+    
+    \draw[->] (i-0) -- (i-1);
+    \draw[->] (i-1) -- (i-2);
+    \draw[->] (i-2) edge [bend left] (i-0);
+\end{tikzpicture}
