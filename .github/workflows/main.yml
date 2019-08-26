@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v1
     
     - name: Install dependencies
-      run: sudo apt-get install -y texlive-collection-latex texlive-latex texlive-latex-fonts texlive-latexconfig texlive-lualatex-math texlive-pslatex
+      run: sudo apt-get install -y texlive texlive-latex-extra texlive-science
 
     - name: Build
       run: |
