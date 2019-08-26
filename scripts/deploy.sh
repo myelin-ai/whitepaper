@@ -14,7 +14,7 @@ git clone --quiet --depth=1 \
 cp "$source_file" "$target_file"
 
 git -C "$temp_directory" \
-    commit --allow-empty -m "Build for $GITHUB_SHA"
+    commit --allow-empty -a -m "Build for $GITHUB_SHA"
 
 git -C "$temp_directory" \
     push
