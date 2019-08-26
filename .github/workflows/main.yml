@@ -21,3 +21,12 @@ jobs:
     
     - name: Spellcheck
       run: ./scripts/spellcheck.sh
+
+    - name: Deploy
+      run: |
+        git config --global user.name 'Myelin Bot'
+        git config --global user.email 'github-bot@myelin.ch'
+        ./scripts/deploy.sh
+      # if: github.ref == 'refs/heads/master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
