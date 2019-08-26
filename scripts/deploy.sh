@@ -8,7 +8,7 @@ target_repository="https://$bot_user:$GITHUB_TOKEN@github.com/whitepaper.myelin.
 temp_directory=$(mktemp -d)
 target_file="$temp_directory/whitepaper.pdf"
 
-git clone --quiet --shallow \
+git clone --quiet --depth=1 \
     "$target_repository" "$temp_directory"
 
 cp "$source_file" "$target_file"
