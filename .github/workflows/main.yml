@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Install dependencies
+      run: apt-get install -y texlive-collection-latex texlive-latex texlive-latex-fonts texlive-latexconfig texlive-lualatex-math texlive-pslatex
+
+    - name: Build
+      run: |
+        pdflatex main.tex
+        bibtex main.aux
+        pdflatex main.tex
+        pdflatex main.tex
+    
+    - name: Spellcheck
+      run: ./scripts/spellcheck.sh
