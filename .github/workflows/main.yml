@@ -1,0 +1,32 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Install dependencies
+      run: sudo apt-get install -y texlive texlive-latex-extra texlive-science
+
+    - name: Build
+      run: |
+        pdflatex main.tex
+        bibtex main.aux
+        pdflatex main.tex
+        pdflatex main.tex
+    
+    - name: Spellcheck
+      run: ./scripts/spellcheck.sh
+
+    - name: Deploy
+      run: |
+        git config --global user.name 'Myelin Bot'
+        git config --global user.email 'github-bot@myelin.ch'
+        ./scripts/deploy.sh
+      if: github.ref == 'refs/heads/master' && github.repository == 'myelin-ai/whitepaper'
+      env:
+        DEPLOY_GITHUB_TOKEN: ${{ secrets.DEPLOY_GITHUB_TOKEN }}
